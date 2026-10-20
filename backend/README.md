@@ -15,16 +15,6 @@ bun test                  # settle math + Miniflare API smoke (no Node required)
 bun run db:local          # optional: apply migrations to wrangler local D1
 ```
 
-Create a remote D1 database when deploying (needs Cloudflare login):
-
-```bash
-bunx wrangler login
-bunx wrangler d1 create betchya
-# paste database_id into wrangler.toml
-bunx wrangler d1 migrations apply betchya --remote
-bunx wrangler deploy
-```
-
 ## Auth
 
 Send `X-User-Id: <uuid>` on mutating requests (matches the iOS Keychain id).
