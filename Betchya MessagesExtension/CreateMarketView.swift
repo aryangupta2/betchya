@@ -3,8 +3,9 @@ import SwiftUI
 struct CreateMarketView: View {
     let groupId: String
     let userId: String
+    let nickname: String
     let members: [GroupMemberDTO]
-    let onCreated: (MarketDTO, Bool) -> Void
+    let onCreated: (MarketDTO) -> Void
 
     @State private var question = ""
     @State private var deadline = Date().addingTimeInterval(60 * 60 * 24)
@@ -64,19 +65,23 @@ struct CreateMarketView: View {
 
     private func submit() async {
         isSubmitting = true
+        errorText = nil
         defer { isSubmitting = false }
         let trimmed = question.trimmingCharacters(in: .whitespacesAndNewlines)
-        let result = await APIClient.createMarketOrLocalDraft(
-            groupId: groupId,
-            userId: userId,
-            question: trimmed,
-            deadline: deadline,
-            subjectId: subjectId,
-            showAmounts: showAmounts
-        )
-        if result.usedLocalDraft {
-            errorText = "API offline — posting local draft bubble."
+        do {
+            try await APIClient.bootstrap(userId: userId)
+            try await APIClient.ensureGroup(groupId: groupId, userId: userId, nickname: nickname)
+            let market = try await APIClient.createMarket(
+                groupId: groupId,
+                userId: userId,
+                question: trimmed,
+                deadline: deadline,
+                subjectId: subjectId,
+                showAmounts: showAmounts
+            )
+            onCreated(market)
+        } catch {
+            errorText = error.localizedDescription
         }
-        onCreated(result.market, result.usedLocalDraft)
     }
 }

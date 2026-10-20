@@ -105,45 +105,25 @@ enum APIClient {
         )
     }
 
-    /// Creates via API when reachable; otherwise a local draft so the bubble UX still works.
-    static func createMarketOrLocalDraft(
-        groupId: String,
+    static func getMarket(marketId: String, userId: String) async throws -> MarketDTO {
+        try await get(path: "/markets/\(marketId)", userId: userId)
+    }
+
+    static func placeBet(
+        marketId: String,
         userId: String,
-        question: String,
-        deadline: Date,
-        subjectId: String?,
-        showAmounts: Bool
-    ) async -> (market: MarketDTO, usedLocalDraft: Bool) {
-        do {
-            try await bootstrap(userId: userId)
-            let nick = UserIdentity.nickname(forGroup: groupId) ?? "Player"
-            try await ensureGroup(groupId: groupId, userId: userId, nickname: nick)
-            let market = try await createMarket(
-                groupId: groupId,
-                userId: userId,
-                question: question,
-                deadline: deadline,
-                subjectId: subjectId,
-                showAmounts: showAmounts
-            )
-            return (market, false)
-        } catch {
-            let draft = MarketDTO(
-                id: UUID().uuidString,
-                groupId: groupId,
-                question: question,
-                deadline: deadline,
-                creatorId: userId,
-                subjectId: subjectId,
-                showAmounts: showAmounts,
-                status: .open,
-                outcome: nil,
-                yesTotal: 0,
-                noTotal: 0,
-                pot: 0
-            )
-            return (draft, true)
+        side: MarketSide,
+        stake: Int
+    ) async throws -> MarketDTO {
+        struct Body: Encodable {
+            let side: MarketSide
+            let stake: Int
         }
+        return try await post(
+            path: "/markets/\(marketId)/bets",
+            userId: userId,
+            body: Body(side: side, stake: stake)
+        )
     }
 
     // MARK: - HTTP

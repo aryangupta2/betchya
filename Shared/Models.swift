@@ -10,6 +10,13 @@ enum MarketStatus: String, Codable {
     case open, locked, resolved, refunded
 }
 
+struct BetSummaryDTO: Codable, Hashable {
+    let userId: String
+    let nickname: String?
+    let side: MarketSide
+    let stake: Int?
+}
+
 struct MarketDTO: Codable, Identifiable, Hashable {
     let id: String
     let groupId: String
@@ -23,6 +30,11 @@ struct MarketDTO: Codable, Identifiable, Hashable {
     let yesTotal: Int
     let noTotal: Int
     let pot: Int
+    let bets: [BetSummaryDTO]
+
+    func hasBet(from userId: String) -> Bool {
+        bets.contains { $0.userId == userId }
+    }
 }
 
 struct GroupMemberDTO: Codable, Identifiable, Hashable {

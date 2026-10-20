@@ -39,6 +39,8 @@ class MessagesViewController: MSMessagesAppViewController {
         }
         lastGroupId = groupId
 
+        let focusedMarketId = MarketMessageBuilder.parseIDs(from: conversation.selectedMessage?.url)?.marketId
+
         let root: AnyView
         if let nickname = UserIdentity.nickname(forGroup: groupId) {
             root = AnyView(
@@ -46,6 +48,7 @@ class MessagesViewController: MSMessagesAppViewController {
                     groupId: groupId,
                     nickname: nickname,
                     userId: UserIdentity.currentUserId(),
+                    initialMarketId: focusedMarketId,
                     onRequestExpand: { [weak self] in
                         self?.requestPresentationStyle(.expanded)
                     },
@@ -92,7 +95,10 @@ class MessagesViewController: MSMessagesAppViewController {
                 print("Betchya insert failed: \(error)")
             }
         }
-        requestPresentationStyle(.compact)
+        // After create, collapse; after bet updates, stay unless already compact.
+        if presentationStyle == .expanded {
+            requestPresentationStyle(.compact)
+        }
         dismiss()
     }
 
