@@ -4,6 +4,7 @@ import SwiftUI
 
 class MessagesViewController: MSMessagesAppViewController {
     private var hostingController: UIHostingController<AnyView>?
+    private var lastGroupId: String?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -11,20 +12,32 @@ class MessagesViewController: MSMessagesAppViewController {
 
     override func willBecomeActive(with conversation: MSConversation) {
         super.willBecomeActive(with: conversation)
-        presentRoot(for: conversation)
+        presentRoot(for: conversation, force: true)
+    }
+
+    override func didSelect(_ message: MSMessage, conversation: MSConversation) {
+        super.didSelect(message, conversation: conversation)
+        presentRoot(for: conversation, force: true)
+    }
+
+    override func willTransition(to presentationStyle: MSMessagesAppPresentationStyle) {
+        super.willTransition(to: presentationStyle)
+        // Keep current SwiftUI navigation; do not rebuild root on expand/collapse.
     }
 
     override func didTransition(to presentationStyle: MSMessagesAppPresentationStyle) {
         super.didTransition(to: presentationStyle)
-        if let conversation = activeConversation {
-            presentRoot(for: conversation)
-        }
     }
 
-    private func presentRoot(for conversation: MSConversation) {
+    private func presentRoot(for conversation: MSConversation, force: Bool) {
         _ = UserIdentity.currentUserId()
         let groupId = resolveGroupId(in: conversation)
         UserIdentity.setGroupId(groupId)
+
+        if !force, groupId == lastGroupId, hostingController != nil {
+            return
+        }
+        lastGroupId = groupId
 
         let root: AnyView
         if let nickname = UserIdentity.nickname(forGroup: groupId) {
@@ -32,14 +45,23 @@ class MessagesViewController: MSMessagesAppViewController {
                 ExtensionHomeView(
                     groupId: groupId,
                     nickname: nickname,
-                    userId: UserIdentity.currentUserId()
+                    userId: UserIdentity.currentUserId(),
+                    onRequestExpand: { [weak self] in
+                        self?.requestPresentationStyle(.expanded)
+                    },
+                    onRequestCompact: { [weak self] in
+                        self?.requestPresentationStyle(.compact)
+                    },
+                    onInsertMarket: { [weak self] market in
+                        self?.insertMarketBubble(market, in: conversation)
+                    }
                 )
             )
         } else {
             root = AnyView(
                 NicknameGateView(groupId: groupId) { [weak self] _ in
                     guard let self, let conversation = self.activeConversation else { return }
-                    self.presentRoot(for: conversation)
+                    self.presentRoot(for: conversation, force: true)
                 }
             )
         }
@@ -62,13 +84,21 @@ class MessagesViewController: MSMessagesAppViewController {
         }
     }
 
-    /// Prefer group id embedded in a selected Betchya message URL; otherwise local ensured id.
+    private func insertMarketBubble(_ market: MarketDTO, in conversation: MSConversation) {
+        let session = conversation.selectedMessage?.session
+        let message = MarketMessageBuilder.makeMessage(for: market, session: session)
+        conversation.insert(message) { error in
+            if let error {
+                print("Betchya insert failed: \(error)")
+            }
+        }
+        requestPresentationStyle(.compact)
+        dismiss()
+    }
+
     private func resolveGroupId(in conversation: MSConversation) -> String {
-        if let url = conversation.selectedMessage?.url,
-           let components = URLComponents(url: url, resolvingAgainstBaseURL: false),
-           let group = components.queryItems?.first(where: { $0.name == "g" })?.value,
-           !group.isEmpty {
-            return group
+        if let ids = MarketMessageBuilder.parseIDs(from: conversation.selectedMessage?.url) {
+            return ids.groupId
         }
         return UserIdentity.ensureGroupId()
     }
