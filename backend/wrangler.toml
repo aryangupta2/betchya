@@ -1,0 +1,14 @@
+name = "betchya-api"
+main = "src/index.ts"
+compatibility_date = "2025-09-01"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "betchya"
+database_id = "local-betchya-dev"
+migrations_dir = "migrations"
+
+[vars]
+STARTING_BONES = "1000"
+MIN_BET = "10"
+RESOLVE_GRACE_HOURS = "48"

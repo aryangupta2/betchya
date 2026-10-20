@@ -1,0 +1,24 @@
+{
+  "name": "betchya-api",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "db:local": "wrangler d1 execute betchya --local --file=./migrations/0001_init.sql",
+    "build": "bun build ./src/index.ts --outfile=./dist/index.js --format=esm --target=browser",
+    "test": "bun test",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "drizzle-orm": "^0.44.5",
+    "hono": "^4.9.8"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^4.20250913.0",
+    "bun-types": "^1.2.21",
+    "miniflare": "^4.20260730.0",
+    "typescript": "^5.9.2",
+    "wrangler": "^4.37.0"
+  }
+}
