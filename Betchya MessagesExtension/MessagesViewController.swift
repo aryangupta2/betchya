@@ -1,6 +1,6 @@
 //
 //  MessagesViewController.swift
-//  Betchya! MessagesExtension
+//  Betchya MessagesExtension
 //
 //  Created by Aryan Gupta on 2026-10-20.
 //
