@@ -7,64 +7,60 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		F058F7F63087CC8500B1E8FB /* Betchya MessagesExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = F058F7F53087CC8500B1E8FB /* Betchya MessagesExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		F058F7FB3087CC8500B1E8FB /* Messages.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F058F7FA3087CC8500B1E8FB /* Messages.framework */; };
+		A10000000000000000000001 /* Betchya MessagesExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = A10000000000000000000011 /* Betchya MessagesExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		A10000000000000000000002 /* Messages.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A10000000000000000000012 /* Messages.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		F058F7F73087CC8500B1E8FB /* PBXContainerItemProxy */ = {
+		A10000000000000000000020 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 000000000000000000000000 /* Project object */;
+			containerPortal = A10000000000000000000000 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = F058F7F43087CC8500B1E8FB;
+			remoteGlobalIDString = A10000000000000000000040;
 			remoteInfo = "Betchya MessagesExtension";
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		F058F8093087CC8600B1E8FB /* Embed Foundation Extensions */ = {
+		A10000000000000000000030 /* Embed Foundation Extensions */ = {
 			isa = PBXCopyFilesBuildPhase;
 			dstPath = "";
 			dstSubfolder = PlugIns;
 			files = (
-				F058F7F63087CC8500B1E8FB /* Betchya MessagesExtension.appex in Embed Foundation Extensions */,
+				A10000000000000000000001 /* Betchya MessagesExtension.appex in Embed Foundation Extensions */,
 			);
 			name = "Embed Foundation Extensions";
 		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		000000000000000000000120 /* MyApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		F058F7ED3087CC8500B1E8FB /* Betchya.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Betchya.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		F058F7F53087CC8500B1E8FB /* Betchya MessagesExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Betchya MessagesExtension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
-		F058F7FA3087CC8500B1E8FB /* Messages.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Messages.framework; path = Library/Frameworks/Messages.framework; sourceTree = DEVELOPER_DIR; };
+		A10000000000000000000010 /* Betchya.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Betchya.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A10000000000000000000011 /* Betchya MessagesExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Betchya MessagesExtension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A10000000000000000000012 /* Messages.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Messages.framework; path = System/Library/Frameworks/Messages.framework; sourceTree = SDKROOT; };
+		A10000000000000000000013 /* Betchya.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Betchya.entitlements; sourceTree = "<group>"; };
+		A10000000000000000000014 /* Betchya MessagesExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Betchya MessagesExtension.entitlements"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		F058F8053087CC8600B1E8FB /* Exceptions for "Betchya MessagesExtension" folder in "Betchya MessagesExtension" target */ = {
+		A10000000000000000000050 /* Exceptions for Extension Info.plist */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
 				Info.plist,
 			);
-			target = F058F7F43087CC8500B1E8FB /* Betchya MessagesExtension */;
+			target = A10000000000000000000040 /* Betchya MessagesExtension */;
 		};
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		000000000000000000000010 /* MyApp */ = {
+		A10000000000000000000060 /* Betchya */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			path = MyApp;
+			path = Betchya;
 			sourceTree = "<group>";
 		};
-		F058F7EE3087CC8500B1E8FB /* Betchya */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = "Betchya";
-			sourceTree = "<group>";
-		};
-		F058F7FC3087CC8500B1E8FB /* Betchya MessagesExtension */ = {
+		A10000000000000000000061 /* Betchya MessagesExtension */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			exceptions = (
-				F058F8053087CC8600B1E8FB /* Exceptions for "Betchya MessagesExtension" folder in "Betchya MessagesExtension" target */,
+				A10000000000000000000050 /* Exceptions for Extension Info.plist */,
 			);
 			path = "Betchya MessagesExtension";
 			sourceTree = "<group>";
@@ -72,162 +68,137 @@
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		000000000000000130000000 /* Frameworks */ = {
+		A10000000000000000000070 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			files = (
 			);
 		};
-		F058F7F23087CC8500B1E8FB /* Frameworks */ = {
+		A10000000000000000000071 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			files = (
-				F058F7FB3087CC8500B1E8FB /* Messages.framework in Frameworks */,
+				A10000000000000000000002 /* Messages.framework in Frameworks */,
 			);
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		000000000000000000000001 = {
+		A10000000000000000000080 = {
 			isa = PBXGroup;
 			children = (
-				000000000000000000000010 /* MyApp */,
-				F058F7EE3087CC8500B1E8FB /* Betchya */,
-				F058F7FC3087CC8500B1E8FB /* Betchya MessagesExtension */,
-				F058F7F93087CC8500B1E8FB /* Frameworks */,
-				000000000000000000000020 /* Products */,
+				A10000000000000000000060 /* Betchya */,
+				A10000000000000000000061 /* Betchya MessagesExtension */,
+				A10000000000000000000013 /* Betchya.entitlements */,
+				A10000000000000000000014 /* Betchya MessagesExtension.entitlements */,
+				A10000000000000000000081 /* Frameworks */,
+				A10000000000000000000082 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		000000000000000000000020 /* Products */ = {
+		A10000000000000000000081 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				000000000000000000000120 /* MyApp.app */,
-				F058F7ED3087CC8500B1E8FB /* Betchya.app */,
-				F058F7F53087CC8500B1E8FB /* Betchya MessagesExtension.appex */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		F058F7F93087CC8500B1E8FB /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				F058F7FA3087CC8500B1E8FB /* Messages.framework */,
+				A10000000000000000000012 /* Messages.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A10000000000000000000082 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A10000000000000000000010 /* Betchya.app */,
+				A10000000000000000000011 /* Betchya MessagesExtension.appex */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		000000000000000100000000 /* MyApp */ = {
+		A10000000000000000000090 /* Betchya */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 000000000000000110000000 /* Build configuration list for PBXNativeTarget "MyApp" */;
+			buildConfigurationList = A100000000000000000000A0 /* Build configuration list for PBXNativeTarget "Betchya" */;
 			buildPhases = (
-				000000000000000120000000 /* Sources */,
-				000000000000000130000000 /* Frameworks */,
-				000000000000000140000000 /* Resources */,
-			);
-			buildRules = (
-			);
-			fileSystemSynchronizedGroups = (
-				000000000000000000000010 /* MyApp */,
-			);
-			name = MyApp;
-			productName = MyApp;
-			productReference = 000000000000000000000120 /* MyApp.app */;
-			productType = "com.apple.product-type.application";
-		};
-		F058F7EC3087CC8500B1E8FB /* Betchya */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = F058F80A3087CC8600B1E8FB /* Build configuration list for PBXNativeTarget "Betchya" */;
-			buildPhases = (
-				F058F7EB3087CC8500B1E8FB /* Resources */,
-				F058F8093087CC8600B1E8FB /* Embed Foundation Extensions */,
+				A10000000000000000000091 /* Sources */,
+				A10000000000000000000070 /* Frameworks */,
+				A10000000000000000000092 /* Resources */,
+				A10000000000000000000030 /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				F058F7F83087CC8500B1E8FB /* PBXTargetDependency */,
+				A10000000000000000000093 /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
-				F058F7EE3087CC8500B1E8FB /* Betchya */,
+				A10000000000000000000060 /* Betchya */,
 			);
-			name = "Betchya";
-			productName = "Betchya";
-			productReference = F058F7ED3087CC8500B1E8FB /* Betchya.app */;
-			productType = "com.apple.product-type.application.messages";
+			name = Betchya;
+			productName = Betchya;
+			productReference = A10000000000000000000010 /* Betchya.app */;
+			productType = "com.apple.product-type.application";
 		};
-		F058F7F43087CC8500B1E8FB /* Betchya MessagesExtension */ = {
+		A10000000000000000000040 /* Betchya MessagesExtension */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F058F8063087CC8600B1E8FB /* Build configuration list for PBXNativeTarget "Betchya MessagesExtension" */;
+			buildConfigurationList = A100000000000000000000B0 /* Build configuration list for PBXNativeTarget "Betchya MessagesExtension" */;
 			buildPhases = (
-				F058F7F13087CC8500B1E8FB /* Sources */,
-				F058F7F23087CC8500B1E8FB /* Frameworks */,
-				F058F7F33087CC8500B1E8FB /* Resources */,
+				A10000000000000000000041 /* Sources */,
+				A10000000000000000000071 /* Frameworks */,
+				A10000000000000000000042 /* Resources */,
 			);
 			buildRules = (
 			);
 			fileSystemSynchronizedGroups = (
-				F058F7FC3087CC8500B1E8FB /* Betchya MessagesExtension */,
+				A10000000000000000000061 /* Betchya MessagesExtension */,
 			);
 			name = "Betchya MessagesExtension";
 			productName = "Betchya MessagesExtension";
-			productReference = F058F7F53087CC8500B1E8FB /* Betchya MessagesExtension.appex */;
+			productReference = A10000000000000000000011 /* Betchya MessagesExtension.appex */;
 			productType = "com.apple.product-type.app-extension.messages";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		000000000000000000000000 /* Project object */ = {
+		A10000000000000000000000 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 2710;
 				LastUpgradeCheck = 2700;
 				TargetAttributes = {
-					000000000000000100000000 = {
-						CreatedOnToolsVersion = 26.3;
-					};
-					F058F7EC3087CC8500B1E8FB = {
+					A10000000000000000000040 = {
 						CreatedOnToolsVersion = 27.1;
 					};
-					F058F7F43087CC8500B1E8FB = {
+					A10000000000000000000090 = {
 						CreatedOnToolsVersion = 27.1;
 					};
 				};
 			};
-			buildConfigurationList = 000000000000000010000000 /* Build configuration list for PBXProject "Betchya" */;
+			buildConfigurationList = A100000000000000000000C0 /* Build configuration list for PBXProject "Betchya" */;
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 				Base,
 			);
-			mainGroup = 000000000000000000000001;
+			mainGroup = A10000000000000000000080;
 			minimizedProjectReferenceProxies = 1;
 			preferredProjectObjectVersion = 90;
-			productRefGroup = 000000000000000000000020 /* Products */;
+			productRefGroup = A10000000000000000000082 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				000000000000000100000000 /* MyApp */,
-				F058F7EC3087CC8500B1E8FB /* Betchya */,
-				F058F7F43087CC8500B1E8FB /* Betchya MessagesExtension */,
+				A10000000000000000000090 /* Betchya */,
+				A10000000000000000000040 /* Betchya MessagesExtension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		000000000000000140000000 /* Resources */ = {
+		A10000000000000000000042 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			files = (
 			);
 		};
-		F058F7EB3087CC8500B1E8FB /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			files = (
-			);
-		};
-		F058F7F33087CC8500B1E8FB /* Resources */ = {
+		A10000000000000000000092 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			files = (
 			);
@@ -235,12 +206,12 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		000000000000000120000000 /* Sources */ = {
+		A10000000000000000000041 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			files = (
 			);
 		};
-		F058F7F13087CC8500B1E8FB /* Sources */ = {
+		A10000000000000000000091 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			files = (
 			);
@@ -248,15 +219,15 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		F058F7F83087CC8500B1E8FB /* PBXTargetDependency */ = {
+		A10000000000000000000093 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = F058F7F43087CC8500B1E8FB /* Betchya MessagesExtension */;
-			targetProxy = F058F7F73087CC8500B1E8FB /* PBXContainerItemProxy */;
+			target = A10000000000000000000040 /* Betchya MessagesExtension */;
+			targetProxy = A10000000000000000000020 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		000000000000000011000000 /* Debug configuration for PBXProject "Betchya" */ = {
+		A100000000000000000000C1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -290,9 +261,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
-				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
-				DRIVERKIT_DEPLOYMENT_TARGET = 27.0;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
@@ -310,23 +279,18 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 27.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
-				MACOSX_DEPLOYMENT_TARGET = 27.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				PROJECT_UNIQUE_VALUE = EQZF1LVS;
-				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				TVOS_DEPLOYMENT_TARGET = 27.0;
-				WATCHOS_DEPLOYMENT_TARGET = 27.0;
-				XROS_DEPLOYMENT_TARGET = 27.0;
 			};
 			name = Debug;
 		};
-		000000000000000012000000 /* Release configuration for PBXProject "Betchya" */ = {
+		A100000000000000000000C2 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -360,9 +324,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
-				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DRIVERKIT_DEPLOYMENT_TARGET = 27.0;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
@@ -374,198 +336,121 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 27.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
-				MACOSX_DEPLOYMENT_TARGET = 27.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
-				PROJECT_UNIQUE_VALUE = EQZF1LVS;
-				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
-				TVOS_DEPLOYMENT_TARGET = 27.0;
-				WATCHOS_DEPLOYMENT_TARGET = 27.0;
-				XROS_DEPLOYMENT_TARGET = 27.0;
 			};
 			name = Release;
 		};
-		000000000000000111000000 /* Debug configuration for PBXNativeTarget "MyApp" */ = {
+		A100000000000000000000A1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				ENABLE_APP_SANDBOX = YES;
-				ENABLE_PREVIEWS = YES;
-				ENABLE_USER_SELECTED_FILES = readonly;
-				GENERATE_INFOPLIST_FILE = YES;
-				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
-				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
-				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
-				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
-				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
-				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
-				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
-				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
-				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "devplaceholder.$(PROJECT_UNIQUE_VALUE:identifier).$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				REGISTER_APP_GROUPS = YES;
-				SDKROOT = auto;
-				STRING_CATALOG_GENERATE_SYMBOLS = YES;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx xros xrsimulator";
-				SWIFT_APPROACHABLE_CONCURRENCY = YES;
-				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
-				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2,7";
-			};
-			name = Debug;
-		};
-		000000000000000112000000 /* Release configuration for PBXNativeTarget "MyApp" */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				ENABLE_APP_SANDBOX = YES;
-				ENABLE_PREVIEWS = YES;
-				ENABLE_USER_SELECTED_FILES = readonly;
-				GENERATE_INFOPLIST_FILE = YES;
-				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
-				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
-				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
-				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
-				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
-				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
-				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
-				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
-				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "devplaceholder.$(PROJECT_UNIQUE_VALUE:identifier).$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				REGISTER_APP_GROUPS = YES;
-				SDKROOT = auto;
-				STRING_CATALOG_GENERATE_SYMBOLS = YES;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx xros xrsimulator";
-				SWIFT_APPROACHABLE_CONCURRENCY = YES;
-				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
-				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2,7";
-			};
-			name = Release;
-		};
-		F058F8073087CC8600B1E8FB /* Debug configuration for PBXNativeTarget "Betchya MessagesExtension" */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = "iMessage App Icon";
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Betchya.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = QYH9HV6R39;
+				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "Betchya MessagesExtension/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "Betchya!";
-				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
-					"@executable_path/../../Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.aryangupta.Betchya.MessagesExtension";
+				PRODUCT_BUNDLE_IDENTIFIER = com.aryangupta.Betchya;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				STRING_CATALOG_GENERATE_SYMBOLS = YES;
-				SWIFT_APPROACHABLE_CONCURRENCY = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
-		F058F8083087CC8600B1E8FB /* Release configuration for PBXNativeTarget "Betchya MessagesExtension" */ = {
+		A100000000000000000000A2 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = "iMessage App Icon";
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Betchya.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = QYH9HV6R39;
+				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "Betchya MessagesExtension/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "Betchya!";
-				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
-					"@executable_path/../../Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.aryangupta.Betchya.MessagesExtension";
+				PRODUCT_BUNDLE_IDENTIFIER = com.aryangupta.Betchya;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				STRING_CATALOG_GENERATE_SYMBOLS = YES;
-				SWIFT_APPROACHABLE_CONCURRENCY = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
-		F058F80B3087CC8600B1E8FB /* Debug configuration for PBXNativeTarget "Betchya" */ = {
+		A100000000000000000000B1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "iMessage App Icon";
+				CODE_SIGN_ENTITLEMENTS = "Betchya MessagesExtension.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = QYH9HV6R39;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_FILE = "Betchya MessagesExtension/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Betchya!";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.aryangupta.Betchya";
+				PRODUCT_BUNDLE_IDENTIFIER = com.aryangupta.Betchya.MessagesExtension;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
-				STRING_CATALOG_GENERATE_SYMBOLS = YES;
-				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
-		F058F80C3087CC8600B1E8FB /* Release configuration for PBXNativeTarget "Betchya" */ = {
+		A100000000000000000000B2 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "iMessage App Icon";
+				CODE_SIGN_ENTITLEMENTS = "Betchya MessagesExtension.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = QYH9HV6R39;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_FILE = "Betchya MessagesExtension/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Betchya!";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.aryangupta.Betchya";
+				PRODUCT_BUNDLE_IDENTIFIER = com.aryangupta.Betchya.MessagesExtension;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
-				STRING_CATALOG_GENERATE_SYMBOLS = YES;
-				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -575,39 +460,31 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		000000000000000010000000 /* Build configuration list for PBXProject "Betchya" */ = {
+		A100000000000000000000A0 /* Build configuration list for PBXNativeTarget "Betchya" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				000000000000000011000000 /* Debug configuration for PBXProject "Betchya" */,
-				000000000000000012000000 /* Release configuration for PBXProject "Betchya" */,
+				A100000000000000000000A1 /* Debug */,
+				A100000000000000000000A2 /* Release */,
 			);
 			defaultConfigurationName = Release;
 		};
-		000000000000000110000000 /* Build configuration list for PBXNativeTarget "MyApp" */ = {
+		A100000000000000000000B0 /* Build configuration list for PBXNativeTarget "Betchya MessagesExtension" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				000000000000000111000000 /* Debug configuration for PBXNativeTarget "MyApp" */,
-				000000000000000112000000 /* Release configuration for PBXNativeTarget "MyApp" */,
+				A100000000000000000000B1 /* Debug */,
+				A100000000000000000000B2 /* Release */,
 			);
 			defaultConfigurationName = Release;
 		};
-		F058F8063087CC8600B1E8FB /* Build configuration list for PBXNativeTarget "Betchya MessagesExtension" */ = {
+		A100000000000000000000C0 /* Build configuration list for PBXProject "Betchya" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				F058F8073087CC8600B1E8FB /* Debug configuration for PBXNativeTarget "Betchya MessagesExtension" */,
-				F058F8083087CC8600B1E8FB /* Release configuration for PBXNativeTarget "Betchya MessagesExtension" */,
-			);
-			defaultConfigurationName = Release;
-		};
-		F058F80A3087CC8600B1E8FB /* Build configuration list for PBXNativeTarget "Betchya" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				F058F80B3087CC8600B1E8FB /* Debug configuration for PBXNativeTarget "Betchya" */,
-				F058F80C3087CC8600B1E8FB /* Release configuration for PBXNativeTarget "Betchya" */,
+				A100000000000000000000C1 /* Debug */,
+				A100000000000000000000C2 /* Release */,
 			);
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 000000000000000000000000 /* Project object */;
+	rootObject = A10000000000000000000000 /* Project object */;
 }
